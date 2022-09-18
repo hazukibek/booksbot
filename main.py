@@ -52,7 +52,7 @@ def get_book(message):
 @bot.message_handler(content_types=['text'])
 def get_user_book(message):
     book = message.text.lower()
-    path = open("G:\Мой диск\NIS учебники" + "\\" + book + ".pdf", "rb")
+    path = open("G:\\Мой диск\\NIS учебники" + "\\" + book + ".pdf", "rb")
     bot.send_message(message.chat.id, "Ищем книгу...")
     bot.send_document(message.chat.id, path)
     path.close()
